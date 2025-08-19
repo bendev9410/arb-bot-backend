@@ -11,7 +11,10 @@ from decouple import config
 
 @api_view(['GET'])
 def get_arb_results(request):
-    API_KEY = config('API_KEY')
+    API_KEY = os.getenv("API_KEY")
+    if not API_KEY:
+        return Response({"error": "Missing API_KEY"}, status=500)
+
     
      
     bookmakers_param = request.query_params.get('flag', None)
