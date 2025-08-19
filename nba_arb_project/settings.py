@@ -66,12 +66,12 @@ TEMPLATES = [
 WSGI_APPLICATION = "nba_arb_project.wsgi.application"
 
 # CORS
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",               # local React dev
-    "https://YOUR-VERCEL-FRONTEND.vercel.app",  # your frontend live
-]
+#CORS_ALLOWED_ORIGINS = [
+#    "http://localhost:3000",               # local React dev
+#    "https://YOUR-VERCEL-FRONTEND.vercel.app",  # your frontend live
+#]
 # While testing, you can temporarily use:
-# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Database (SQLite locally, Postgres in prod)
 DATABASES = {
